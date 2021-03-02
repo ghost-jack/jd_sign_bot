@@ -15,14 +15,14 @@ jobs:
             - name: Checkout codes
               uses: actions/checkout@v2
               with:
-                  ref: 'master'
+                  ref: 'main'
             - name: Use Node.js
               uses: actions/setup-node@v1
               with:
                 node-version: '12.x'
             - name: Run app
               run: npm install
-            - run: node app.js
+            - run: node jd_pet.js&jd_fruit1.js&jd_joy.js
               env:
                 JD_COOKIE: ${{ secrets.JD_COOKIE }}
                 JD_COOKIE_2: ${{ secrets.JD_COOKIE_2 }} 
